@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Marafon</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Neucha&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="viewport"
+      content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      if (screen.width > 800) {
+        // Animate navigation
+        $(document).ready(function () {
+          // функцию скролла привязать к окну браузера
+          $(window).scroll(function () {
+            var distanceTop = $("#slideMenu").offset().top;
+            if ($(window).scrollTop() >= distanceTop)
+              $("nav").attr("id", "fixed");
+            else $("nav").attr("id", "nav");
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="canvas">
+      <div class="content">
+        <header>
+          <!-- <a href="/" id="logo"> <span>MyWebsite</span> </a> -->
+          <span id="logo">MyWebsite</span>
+          <span id="contact">
+            <a href="">Контакты</a>
+          </span>
+        </header>
+        <nav>
+          <a href="">О марафоне</a>
+          <a href="">Обо мне</a>
+          <a href="">Меню на неделю</a>
+        </nav>
+        <div id="slideMenu">slideMenu</div>
+        <div id="wrapper">
+          <div id="aboutMarafonCol"></div>
+          <div class="hide" id="aboutMeCol"></div>
+          <div class="hide" id="menuCol"></div>
+        </div>
+      </div>
+      <footer>
+        <div id="social">
+          <a href="" title="Telegram"
+            ><img src="img/social/telegram.png" alt="Telegram"
+          /></a>
+          <a href="" title="Группа FaceBook"
+            ><img src="img/social/facebook.png" alt="Группа FaceBook"
+          /></a>
+          <a href="" title="Группа Вконтакте"
+            ><img src="img/social/vkontakte_32.png" alt="Группа Вконтакте"
+          /></a>
+        </div>
+      </footer>
+    </div>
+    <!-- модальное окно -->
+    <div class="lightbox js-lightbox">
+      <div class="lightbox__overlay">
+        <div class="lightbox__content">
+          <table>
+            <caption>
+              <b>Мои контакты</b>
+            </caption>
+            <tbody>
+              <tr>
+                <td>Имя:</td>
+                <td>Лиля</td>
+              </tr>
+              <tr>
+                <td>телефон:</td>
+                <td>050...</td>
+              </tr>
+              <tr>
+                <td>mail:</td>
+                <td>..........@gmail.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="lightbox__button"
+        data-action="close-lightbox"
+      ></button>
+    </div>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
