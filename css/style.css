@@ -58,7 +58,8 @@ header #logo {
   font-size: 1.7em;
   color: white;
   margin-left: 5%;
-  font-family: "Dancing Script", cursive;
+  font-family: "Marck Script", cursive;
+  /* font-family: "Dancing Script", cursive; */
   line-height: 50px;
 }
 
@@ -113,8 +114,10 @@ nav#fixed a {
 
 nav a:hover,
 nav#fixed a:hover {
-  border-top: 5px solid #6accd7;
-  color: #6accd7;
+  /* border-top: 5px solid #6accd7; */
+  border-top: 5px solid rgb(193, 243, 193);
+  /* color: #6accd7; */
+  color: rgb(109, 197, 109);
 }
 
 .selected {
